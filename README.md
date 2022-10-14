@@ -4,4 +4,4 @@ proyecto de prueba
 
 ## 🔗 Resultado
 
-https://jaenfigueroa.github.io/Intento-de-Pagina-incriptada/
+https://jaenfigueroa.github.io/Aplicacion-de-notas/
