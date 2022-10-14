@@ -1,0 +1,9 @@
+body {
+  /* background-color: rgb(255, 0, 0); */
+}
+
+.contenedor-tareas-main article {
+  max-width: 32%;
+  flex: 1;
+  /* width: calc(50% -0.5rem); */
+}
