@@ -75,7 +75,7 @@ main {
 }
 .nota-nueva {
   /* background-color: rgb(227, 86, 86); */
-  background-color: rgb(224, 224, 224);
+  background-color: rgb(215, 215, 215);
   display: flex;
   flex-direction: column;
   /* display: none; */
@@ -106,7 +106,7 @@ main {
 /* LISTA DE NOTAS //////////////////////////*/
 .contenedor-tareas {
   /* background-color: rgb(167, 98, 232); */
-  background-color: #ddd;
+  background-color: rgb(215, 215, 215);
   padding: 2rem;
   display: flex;
   flex-direction: column;
