@@ -89,7 +89,7 @@ main {
   max-width: 100%;
   min-width: 100%;
   min-height: 50px;
-  max-height: 50px;
+  /* max-height: 50px; */
 }
 .nota-nueva button:disabled {
   background-color: rgba(255, 255, 255, 0.485);
