@@ -83,11 +83,14 @@ class Tarea {
 botonGuardar.addEventListener('click', guardarTarea)
 
 function guardarTarea() {
-  const texto = document.querySelector('#texto').value
+  let texto = document.querySelector('#texto').value
   const id = Math.floor(Math.random() * 1000)
 
   const nuevaTarea = new Tarea(id, texto, false)
   baseDatos.push(nuevaTarea)
+
+  //limpiar la pantalla despues de darle click en guardar
+  texto = ''
 
   MostrarTareas()
 }
