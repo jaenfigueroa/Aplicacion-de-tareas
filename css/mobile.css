@@ -1,3 +1,11 @@
+:root {
+  --color1: #dabfff;
+  --color2: #907ad6;
+  --color3: #4f518c;
+  --color4: #2c2a4a;
+  --color5: #aed2ff;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -6,7 +14,7 @@
   font-family: sans-serif;
 }
 html {
-  font-size: 62.5%; /* PARA USAR -> 1rem = 1rem */
+  font-size: 62.5%; /* PARA USAR -> 1rem = 10px */
 }
 ul,
 ol {
@@ -21,10 +29,12 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  /* background-color: rgb(255, 199, 199); */
+  background-color: var(--color5);
+  background: linear-gradient(#64e8de, #aa88ff);
 }
 header {
-  background-color: rgb(204, 204, 204);
+  background-color: var(--color3);
+  color: white;
   width: 100%;
   height: 5rem;
 
@@ -64,19 +74,21 @@ main {
 #seccion-escribir {
   display: none;
 }
+
 .nota-nueva {
-  padding: 2rem;
-}
-.contenedor-contador {
-  /* background-color: rgb(243, 171, 231); */
-  padding: 1rem 0;
-}
-.nota-nueva {
-  /* background-color: rgb(227, 86, 86); */
-  background-color: rgb(215, 215, 215);
+  background-color: var(--color2);
   display: flex;
   flex-direction: column;
   /* display: none; */
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: -5px -5px 10px 5px rgba(0, 0, 0, 0.081) inset;
+
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
 }
 .nota-nueva form {
   /* background-color: blue; */
@@ -89,12 +101,29 @@ main {
   min-height: 5rem;
   /* max-height: 5rem; */
   padding: 1rem;
+  border-radius: 10px;
+  outline: none;
+  background-color: var(--color1);
+
+  box-shadow: -2px -2px 10px 5px rgba(0, 0, 0, 0.081);
+  backdrop-filter: blur(5000px);
+}
+.contenedor-contador {
+  /* background-color: rgb(243, 171, 231); */
+  padding: 1rem 0;
 }
 .nota-nueva button:disabled {
   /* background-color: rgba(255, 255, 255, 0); */
   color: black;
   border: 0.05rem solid rgb(53, 53, 53);
   border-radius: 0.2rem;
+
+  background-color: rgba(182, 182, 182, 0.377);
+  border-radius: 100px;
+  border: 0.5px solid rgb(255, 255, 255);
+}
+.nota-nueva button:disabled:hover {
+  background-color: rgba(182, 182, 182, 0.377);
 }
 .nota-nueva .contenedor-botones {
   display: flex;
@@ -106,24 +135,33 @@ main {
 }
 /* LISTA DE NOTAS //////////////////////////*/
 .contenedor-tareas {
-  /* background-color: rgb(167, 98, 232); */
-  background-color: rgb(215, 215, 215);
+  background-color: var(--color2);
   padding: 2rem;
   display: flex;
   flex-direction: column;
   gap: 2rem;
   min-height: 40rem;
+
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
 }
 
 .contenedor-tareas article {
   /* background-color: pink; */
-  background-color: white;
+  background-color: var(--color1);
   padding: 1rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
   word-break: break-word;
   min-width: 20rem;
+  border-radius: 10px;
+  box-shadow: -2px -2px 10px 5px rgba(0, 0, 0, 0.081);
+
+  backdrop-filter: blur(5000px);
 }
 
 .contenedor-tareas article button {
@@ -134,8 +172,14 @@ main {
   margin-left: 1rem;
   /* border-radius: 100%; */
   border: 0.01rem solid black;
+  background-color: var(--color4);
+  color: white;
+  border-radius: 100%;
+  border: none;
 }
-
+.contenedor-tareas article button:hover {
+  background-color: #4f518c;
+}
 .contenedor-tareas-main {
   /* background-color: fuchsia; */
   display: flex;
@@ -144,7 +188,8 @@ main {
 }
 
 footer {
-  background-color: rgb(204, 204, 204);
+  background-color: var(--color3);
+  color: white;
   width: 100%;
   height: 5rem;
 
@@ -161,4 +206,19 @@ footer {
 #boton-salir,
 #boton-guardar {
   height: 4rem;
+}
+
+.contenedor-botones button,
+.boton-nueva-nota {
+  background-color: rgb(248, 218, 255);
+  border-radius: 100px;
+  border: none;
+
+  box-shadow: -2px -2px 10px 5px rgb(139, 191, 210);
+  backdrop-filter: blur(5000px);
+}
+.contenedor-botones button:hover,
+.boton-nueva-nota:hover {
+  background-color: rgb(224, 100, 255);
+  transition: 0.3s;
 }
