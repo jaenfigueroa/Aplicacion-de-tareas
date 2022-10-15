@@ -11,8 +11,6 @@ function recuperValoresLocalStorage() {
 
 //RECUPERAR LOS VALORES DEL LOCAL STORAGE Y RENDERIZARLOS POR PRIMERA VEZ
 window.addEventListener('load', () => {
-  console.log(window.localStorage);
-
   valor = window.localStorage.getItem('base-datos')
 
   if (valor === null || undefined) {
