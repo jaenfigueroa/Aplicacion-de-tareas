@@ -6,7 +6,7 @@
   font-family: sans-serif;
 }
 html {
-  font-size: 62.5%; /* PARA USAR -> 1rem = 1rem */
+  font-size: 62.5%; /* PARA USAR -> 1rem = 10px */
 }
 ul,
 ol {
