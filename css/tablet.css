@@ -1,3 +1,12 @@
+* {
+  font-size: 2rem;
+}
+body {
+  zoom: 110%;
+}
+h1 {
+  font-size: 4rem;
+}
 .contenedor {
   max-width: 700px;
 }
@@ -7,7 +16,7 @@
   flex-wrap: wrap;
 }
 .contenedor-tareas article {
-  max-width: 49.1%;
+  max-width: 100%;
   flex: 1;
 }
 .nota-nueva .contenedor-botones {
@@ -17,4 +26,16 @@
 }
 .contenedor-botones button {
   max-width: 200px;
+}
+
+.seccion-escribir,
+.seccion-tareas {
+  padding: 4rem;
+}
+.texto {
+  font-size: 2.5rem;
+  height: 6rem !important;
+}
+.contenido {
+  font-size: 2.3rem;
 }

@@ -1,3 +1,13 @@
+:root {
+  --color1: black;
+  --color2: #073b4c;
+  --color3: #118ab2;
+  --color4: #06d6a0;
+  --color5: #ffd166;
+  --color6: #ef476f;
+  --color7: white;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -115,8 +125,13 @@ main {
   gap: 2rem;
   min-height: 40rem;
 }
-
-.seccion-tareas article {
+.contenedor-tareas {
+  /* background-color: fuchsia; */
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.articulo {
   /* background-color: pink; */
   background-color: white;
   padding: 1rem;
@@ -127,7 +142,7 @@ main {
   min-width: 20rem;
 }
 
-article .boton-eliminar {
+.articulo .boton-eliminar {
   width: 3rem;
   min-width: 3rem;
   height: 3rem;
@@ -135,13 +150,6 @@ article .boton-eliminar {
   margin-left: 1rem;
   /* border-radius: 100%; */
   border: 0.01rem solid black;
-}
-
-.contenedor-tareas {
-  /* background-color: fuchsia; */
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
 }
 
 footer {
@@ -166,4 +174,80 @@ footer {
 
 .tachado {
   text-decoration: line-through;
+  background-color: rgb(168, 168, 168);
+}
+
+/* /////////////////////// */
+header,
+footer {
+  background-color: var(--color2);
+  background-color: rgba(255, 255, 255, 0);
+  color: var(--color7);
+  color: black;
+}
+body {
+  background-color: var(--color3);
+  background: linear-gradient(#64e8de, #8a64eb);
+}
+h1 {
+  font-size: 3rem;
+}
+.seccion-escribir,
+.seccion-tareas {
+  background-color: #ef476f;
+  background: linear-gradient(#ffcf1b, #ff881b);
+  border-radius: 10px;
+  box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.499);
+}
+.articulo {
+  background-color: #ffffff;
+  /* background: linear-gradient(#e0c4fd, #8fc6fd); */
+  /* background: linear-gradient(135deg, #9da2ff 60%, crimson); */
+  border-radius: 10px;
+  /* box-shadow: 0px 0px 10px 0px rgb(210, 210, 210); */
+  border: 2px solid black;
+}
+#boton-salir,
+#boton-guardar,
+.boton-nueva-tarea {
+  background-color: var(--color4);
+  border-radius: 10px;
+  background-color: #e0c4fd;
+}
+
+#boton-salir:hover,
+#boton-guardar:hover,
+.boton-nueva-tarea:hover {
+  background-color: var(--color4);
+  border-radius: 10px;
+  background-color: #c188ff;
+}
+
+#boton-guardar:disabled {
+  background-color: gray;
+}
+
+.tachado {
+  /* text-decoration: none; */
+  background-color: #8c8c8c;
+  /* background: linear-gradient(135deg, #3b3b3b 60%, rgb(212, 20, 58)); */
+}
+
+.texto {
+  border-radius: 10px;
+}
+.boton-eliminar {
+  /* border-radius: 3px; */
+  border-radius: 100%;
+  /* align-self: center; */
+  background-color: crimson;
+  color: white;
+}
+.contenedor-botones {
+  margin-top: 2rem;
+}
+
+.seccion-escribir {
+  padding-top: 2.5rem !important;
+  padding-bottom: 2.5rem !important;
 }

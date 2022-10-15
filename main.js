@@ -27,9 +27,11 @@ function MostrarTareas() {
 
   baseDatos.forEach(elemento => {
     contenido = `
-    <article id='${elemento.id}' onclick="tacharTarea(${elemento.id})">
-    <p class='contenido ${elemento.tachado ? 'tachado' : ''}' >${elemento.contenido}</p>
+    <article class='articulo ${elemento.tachado ? 'tachado' : ''}' id='${elemento.id}' onclick="tacharTarea(${elemento.id})">
+    <p class='contenido ' >${elemento.contenido}</p>
+    <div class='contenedor-eliminar'>
     <button class="boton-eliminar" onclick="eliminarTarea(${elemento.id})" >X</button>
+    </div>
     </article>
     ` + contenido
   });
@@ -40,7 +42,6 @@ function MostrarTareas() {
 }
 
 
-
 //ALTERNAR EL EDITOR DE TEXTO///////////////
 const seccionEditar = document.querySelector('#seccion-escribir')
 const botonAgregar = document.querySelector('#boton-nueva-tarea')
@@ -48,10 +49,12 @@ const botonSalir = document.querySelector('#boton-salir')
 
 botonAgregar.addEventListener('click', () => {
   seccionEditar.style.display = 'flex'
+  document.querySelector('#boton-nueva-tarea').style.display = 'none'
 })
 
 botonSalir.addEventListener('click', () => {
   seccionEditar.style.display = 'none'
+  document.querySelector('#boton-nueva-tarea').style.display = 'block'
 })
 
 //COMPROBAR CANTIDAD DE CARACTERES/////////
@@ -60,7 +63,7 @@ const botonGuardar = document.querySelector('#boton-guardar')
 const contador = document.querySelector('#contador')
 
 texto.addEventListener('input', () => {
-  let valor = 50 - texto.value.length
+  let valor = 60 - texto.value.length
 
   if (valor < 0) {
     botonGuardar.disabled = true
@@ -83,16 +86,20 @@ class Tarea {
 botonGuardar.addEventListener('click', guardarTarea)
 
 function guardarTarea() {
+
   const texto = document.querySelector('#texto').value
-  const id = Math.floor(Math.random() * 1000)
 
-  const nuevaTarea = new Tarea(id, texto, false)
-  baseDatos.push(nuevaTarea)
+  if (texto) {
+    const id = Math.floor(Math.random() * 1000)
 
-  //limpiar la pantalla despues de darle click en guardar
-  document.querySelector('#texto').value = ''
+    const nuevaTarea = new Tarea(id, texto, false)
+    baseDatos.push(nuevaTarea)
 
-  MostrarTareas()
+    //limpiar la pantalla despues de darle click en guardar
+    document.querySelector('#texto').value = ''
+
+    MostrarTareas()
+  }
 }
 
 //TACHAR TAREAS//////////////////////////////
