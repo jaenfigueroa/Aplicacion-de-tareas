@@ -2,20 +2,18 @@
 let baseDatos = []
 
 function guardarEnLocalStorage() {
-  window.localStorage.setItem('base-datos', JSON.stringify(baseDatos))
+  localStorage.setItem('base-datos', JSON.stringify(baseDatos))
 }
 
 function recuperValoresLocalStorage() {
-  return JSON.parse(window.localStorage.getItem('base-datos'))
+  return JSON.parse(localStorage.getItem('base-datos'))
 }
 
 //RECUPERAR LOS VALORES DEL LOCAL STORAGE Y RENDERIZARLOS POR PRIMERA VEZ
 window.addEventListener('load', () => {
-  valor = window.localStorage.getItem('base-datos')
+  valor = localStorage.getItem('base-datos')
 
-  if (valor === null || undefined) {
-    baseDatos = []
-  } else {
+  if (valor !== null || undefined) {
     baseDatos = recuperValoresLocalStorage()
   }
 
@@ -26,8 +24,6 @@ window.addEventListener('load', () => {
 function MostrarTareas() {
 
   let contenido = ''
-
-  // console.log(baseDatos)
 
   baseDatos.forEach(elemento => {
     contenido = `
