@@ -2,24 +2,34 @@
 let baseDatos = []
 
 function guardarEnLocalStorage() {
-  localStorage.setItem('base-datos', JSON.stringify(baseDatos))
+  window.localStorage.setItem('base-datos', JSON.stringify(baseDatos))
 }
 
 function recuperValoresLocalStorage() {
-  return JSON.parse(localStorage.getItem('base-datos'))
+  return JSON.parse(window.localStorage.getItem('base-datos'))
 }
 
 //RECUPERAR LOS VALORES DEL LOCAL STORAGE Y RENDERIZARLOS POR PRIMERA VEZ
 window.addEventListener('load', () => {
-  baseDatos = recuperValoresLocalStorage()
+  console.log(window.localStorage);
 
-  MostrarTareas(baseDatos)
+  valor = window.localStorage.getItem('base-datos')
+
+  if (valor === null || undefined) {
+    baseDatos = []
+  } else {
+    baseDatos = recuperValoresLocalStorage()
+  }
+
+  MostrarTareas()
 })
 
 //RENDERIZAR LAS TAREAS////////
 function MostrarTareas() {
 
   let contenido = ''
+
+  // console.log(baseDatos)
 
   baseDatos.forEach(elemento => {
     contenido = `
@@ -34,6 +44,7 @@ function MostrarTareas() {
 
   guardarEnLocalStorage(baseDatos)
 }
+
 
 
 //ALTERNAR EL EDITOR DE TEXTO///////////////
@@ -101,4 +112,5 @@ function eliminarTarea(idParaEliminar) {
 
   MostrarTareas()
 }
+
 
