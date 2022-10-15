@@ -6,19 +6,17 @@
   font-family: sans-serif;
 }
 html {
-  font-size: 62.5%; /* PARA USAR -> 1rem = 10px */
+  font-size: 62.5%; /* PARA USAR -> 1rem = 1rem */
 }
 ul,
 ol {
   list-style: none;
 }
-button {
-  animation: all 1000;
-}
+
 /*/////////////////////////*/
 body {
   height: 100%;
-  /* min-height: 700px; */
+  /* min-height: 70rem; */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -49,7 +47,7 @@ main {
 }
 .contenedor {
   width: 90%;
-  max-width: 1200px;
+  max-width: 120rem;
   /* background-color: aquamarine; */
   display: flex;
   flex-direction: column;
@@ -88,13 +86,15 @@ main {
 .nota-nueva textarea {
   max-width: 100%;
   min-width: 100%;
-  min-height: 50px;
-  /* max-height: 50px; */
+  min-height: 5rem;
+  /* max-height: 5rem; */
   padding: 1rem;
 }
 .nota-nueva button:disabled {
-  background-color: rgba(255, 255, 255, 0.485);
+  /* background-color: rgba(255, 255, 255, 0); */
   color: black;
+  border: 0.05rem solid rgb(53, 53, 53);
+  border-radius: 0.2rem;
 }
 .nota-nueva .contenedor-botones {
   display: flex;
@@ -112,7 +112,7 @@ main {
   display: flex;
   flex-direction: column;
   gap: 2rem;
-  min-height: 400px;
+  min-height: 40rem;
 }
 
 .contenedor-tareas article {
@@ -123,17 +123,17 @@ main {
   justify-content: space-between;
   align-items: center;
   word-break: break-word;
-  min-width: 200px;
+  min-width: 20rem;
 }
 
 .contenedor-tareas article button {
-  width: 30px;
-  min-width: 30px;
-  height: 30px;
+  width: 3rem;
+  min-width: 3rem;
+  height: 3rem;
   align-self: flex-start;
   margin-left: 1rem;
   /* border-radius: 100%; */
-  border: 0.1px solid black;
+  border: 0.01rem solid black;
 }
 
 .contenedor-tareas-main {
