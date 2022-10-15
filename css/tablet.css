@@ -1,27 +1,16 @@
-body {
-  /* background-color: blue; */
-}
-/* .contenedor {
-  margin: auto;
-  display: flex;
-} */
 .contenedor {
   max-width: 700px;
 }
 
-.contenedor-tareas-main {
+.contenedor-tareas {
   flex-direction: row;
   flex-wrap: wrap;
-  /* flex: 1 1; */
 }
-.contenedor-tareas-main article {
+.contenedor-tareas article {
   max-width: 49.1%;
   flex: 1;
-  /* width: calc(50% -0.5rem); */
 }
 .nota-nueva .contenedor-botones {
-  /* background-color: blue; */
-  /* width: 50%; */
   display: flex;
   justify-content: center;
   gap: 1rem;
