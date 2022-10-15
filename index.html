@@ -23,7 +23,7 @@
   </head>
 
   <body>
-    <header>NOTAS</header>
+    <header>TAREAS</header>
 
     <main>
       <div class="contenedor">
@@ -31,7 +31,7 @@
         <section class="nota-nueva" id="seccion-escribir">
           <textarea type="text" id="texto"></textarea>
           <div class="contenedor-contador">
-            <p>Caracteres restantes: <span id="contador">100</span></p>
+            <p>Caracteres restantes: <span id="contador">50</span></p>
           </div>
           <div class="contenedor-botones">
             <button id="boton-salir">Salir</button>
@@ -39,61 +39,11 @@
           </div>
         </section>
         <!--  -->
-        <section class="contenedor-tareas" id="seccion-tareas">
-          <button id="boton-escribir" class="boton-nueva-nota">
-            Nueva Nota
+        <section class="seccion-tareas" id="seccion-tareas">
+          <button class="boton-nueva-tarea" id="boton-nueva-tarea">
+            Nueva Tarea
           </button>
-          <div class="contenedor-tareas-main" id="contenedor">
-            <article id="contenedor-1">
-              <p>
-                Lorem, ipsum dolor Lorem, ipsum dolor sit amet consectetur
-                adipisicing elit. Incidunt, voluptatem? lorem1
-              </p>
-              <button class="boton-eliminar" id="1" title="eliminar">X</button>
-            </article>
-            <article id="contenedor-2">
-              <p>
-                Lorem, ipsum dolor Lorem, ipsum dolor sit amet consectetur
-                adipisicing elit. Incidunt, voluptatem? lorem2
-              </p>
-              <button class="boton-eliminar" id="2">X</button>
-            </article>
-            <article id="contenedor-3">
-              <p>
-                Lorem, ipsum dolor Lorem, ipsum dolor sit amet consectetur
-                adipisicing elit. Incidunt, voluptatem? lorem3
-              </p>
-              <button class="boton-eliminar" id="3">X</button>
-            </article>
-            <article id="contenedor-4">
-              <p>
-                Lorem, ipsum dolor Lorem, ipsum dolor sit amet consectetur
-                adipisicing elit. Incidunt, voluptatem? lorem4
-              </p>
-              <button class="boton-eliminar" id="4">X</button>
-            </article>
-            <article id="contenedor-5">
-              <p>
-                Lorem, ipsum dolor Lorem, ipsum dolor sit amet consectetur
-                adipisicing elit. Incidunt, voluptatem? lorem5
-              </p>
-              <button class="boton-eliminar" id="5">X</button>
-            </article>
-            <article id="contenedor-6">
-              <p>
-                Lorem, ipsum dolor Lorem, ipsum dolor sit amet consectetur
-                adipisicing elit. Incidunt, voluptatem? lorem6
-              </p>
-              <button class="boton-eliminar" id="6">X</button>
-            </article>
-            <article id="contenedor-7">
-              <p>
-                Lorem, ipsum dolor Lorem, ipsum dolor sit amet consectetur
-                adipisicing elit. Incidunt, voluptatem? lorem7
-              </p>
-              <button class="boton-eliminar" id="7">X</button>
-            </article>
-          </div>
+          <div class="contenedor-tareas" id="contenedor-tareas"></div>
         </section>
       </div>
     </main>

@@ -105,7 +105,7 @@ main {
   width: 48%;
 }
 /* LISTA DE NOTAS //////////////////////////*/
-.contenedor-tareas {
+.seccion-tareas {
   /* background-color: rgb(167, 98, 232); */
   background-color: rgb(215, 215, 215);
   padding: 2rem;
@@ -115,7 +115,7 @@ main {
   min-height: 40rem;
 }
 
-.contenedor-tareas article {
+.seccion-tareas article {
   /* background-color: pink; */
   background-color: white;
   padding: 1rem;
@@ -126,7 +126,7 @@ main {
   min-width: 20rem;
 }
 
-.contenedor-tareas article button {
+article .boton-eliminar {
   width: 3rem;
   min-width: 3rem;
   height: 3rem;
@@ -136,7 +136,7 @@ main {
   border: 0.01rem solid black;
 }
 
-.contenedor-tareas-main {
+.contenedor-tareas {
   /* background-color: fuchsia; */
   display: flex;
   flex-direction: column;
@@ -157,8 +157,12 @@ footer {
   bottom: 0;
 }
 /* EXTRAS ////////// */
-.boton-nueva-nota,
+.boton-nueva-tarea,
 #boton-salir,
 #boton-guardar {
   height: 4rem;
+}
+
+.tachado {
+  text-decoration: line-through;
 }
