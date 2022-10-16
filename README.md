@@ -2,7 +2,7 @@
 
 proyecto de prueba
 
-## 🔗 Resultado
+## 🔗 Resultado (sitio web)
 
 https://jaenfigueroa.github.io/Aplicacion-de-notas/
 
