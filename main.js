@@ -97,6 +97,7 @@ function guardarTarea() {
 
     //limpiar la pantalla despues de darle click en guardar
     document.querySelector('#texto').value = ''
+    document.querySelector('#contador').textContent = 0
 
     MostrarTareas()
   }
