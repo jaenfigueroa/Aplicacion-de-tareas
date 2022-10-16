@@ -4,7 +4,7 @@ proyecto de prueba
 
 ## 🔗 Resultado (sitio web)
 
-https://jaenfigueroa.github.io/Aplicacion-de-notas/
+https://jaenfigueroa.github.io/Aplicacion-de-tareas/
 
 ## 🔗 Vista previa
 
