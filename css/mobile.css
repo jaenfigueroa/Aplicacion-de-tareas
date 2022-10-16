@@ -75,7 +75,7 @@ main {
   display: none;
 }
 .seccion-escribir {
-  padding: 2rem;
+  padding: 2.5rem 2rem;
 }
 .contenedor-contador {
   /* background-color: rgb(243, 171, 231); */
@@ -170,6 +170,7 @@ footer {
 #boton-salir,
 #boton-guardar {
   height: 4rem;
+  margin-bottom: 1rem;
 }
 
 .tachado {
@@ -245,9 +246,4 @@ h1 {
 }
 .contenedor-botones {
   margin-top: 2rem;
-}
-
-.seccion-escribir {
-  padding-top: 2.5rem !important;
-  padding-bottom: 2.5rem !important;
 }
