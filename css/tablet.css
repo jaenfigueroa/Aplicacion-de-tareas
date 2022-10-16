@@ -28,7 +28,10 @@ h1 {
   max-width: 200px;
 }
 
-.seccion-escribir,
+.seccion-escribir {
+  padding: 2.5rem 4rem;
+}
+
 .seccion-tareas {
   padding: 4rem;
 }
