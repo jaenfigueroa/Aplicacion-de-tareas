@@ -4,6 +4,9 @@
 body {
   zoom: 110%;
 }
+header {
+  margin-top: 2rem;
+}
 h1 {
   font-size: 4rem;
 }
